@@ -21,6 +21,9 @@ CCLIBS =
 CCFLAGS = -g -c -Wall -std=c99 -pedantic -I $(INCLUDEDIR) $(CCLIBS)
 ASFLAGS =
 
+# Read features task
+CCFEATURES = $(patsubst %,-DFEATURE_%,$(WARENLAGER))
+
 #
 ## Tasks
 #
@@ -32,7 +35,7 @@ $(TARGET): $(CCOBJECTS)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.c
 	mkdir -p $(dir $@)
-	$(CC) $(CCFLAGS) -o $@ $<
+	$(CC) $(CCFLAGS) $(CCFEATURES) -o $@ $<
 
 clean:
 	rm -r $(BUILDDIR) $(TARGET)

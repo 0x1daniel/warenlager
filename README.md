@@ -22,9 +22,9 @@ Documentation can be found in [`/doc`](https://github.com/oltdaniel/warenlager/b
 $ git clone https://github.com/oltdaniel/warenlager
 $ cd warenlager
 # Compile with hall features (default)
-$ WARENLAGER=kv,doc,raw,qu  make
+$ WARENLAGER="KV DOC RAW QU"  make
 # Compile with selected features
-$ WARENLAGER=kv,qu make
+$ WARENLAGER="KV RAW" make
 ```
 
 ```shell
