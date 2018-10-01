@@ -19,14 +19,16 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-#ifndef MAIN_H
-#define MAIN_H
-
 #include "info.h"
-#include "util.h"
 
-#include <stdio.h> // printf
-#include <stdlib.h> // exit
-#include <string.h> // strcmp
-
-#endif
+const char *info = "warenlager v0.0.01p0";
+const char *help = "Welcome to %s!\n\n" \
+                    "Usage: `warenlager [command] {options}`.\n" \
+                    "Commands:\n" \
+                    "  help    : Print this message\n" \
+                    "  version : Print version number\n" \
+                    "  run     : Start the server\n" \
+                    "\nAvailable options:\n" \
+                    "  -p [PORT] : Set a port\n" \
+                    "  -h [HOST] : Set host to bind on\n" \
+                    "\n";

@@ -19,14 +19,14 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef INFO_H
+#define INFO_H
 
-#include "info.h"
-#include "util.h"
+#define EXIT_OK 0
+#define ERROR_CMD 1
+#define ERROR_FAL 2
 
-#include <stdio.h> // printf
-#include <stdlib.h> // exit
-#include <string.h> // strcmp
+const char *info;
+const char *help;
 
 #endif

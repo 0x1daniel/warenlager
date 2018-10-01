@@ -21,6 +21,22 @@
 // SOFTWARE.
 #include "main.h"
 
-int main() {
-    return 0;
+int main(int argc, char *argv[]) {
+    /* Throw error if no command is given */
+    if(argc < 2 || argv[1][0] == '-') {
+        util_error("No command given. See `warenlager help`.");
+        exit(ERROR_CMD);
+    }
+
+    /* Parse command */
+    if(strcmp(argv[1], "help") == 0) {
+        printf(help, info);
+    } else if(strcmp(argv[1], "version") == 0) {
+        printf("%s\n", info);
+    } else if(strcmp(argv[1], "run") == 0) {
+        util_error("Not implemented yet.");
+    } else {
+        util_error("Command not found. See `warenlager help`.");
+        exit(ERROR_CMD);
+    }
 }

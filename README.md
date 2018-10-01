@@ -15,6 +15,25 @@ maximize the performance on linux driven systems.
 
 Documentation can be found in [`/doc`](https://github.com/oltdaniel/warenlager/blob/master/doc/README.md).
 
+## Usage
+
+```shell
+# Get the code
+$ git clone https://github.com/oltdaniel/warenlager
+$ cd warenlager
+# Compile with hall features (default)
+$ WARENLAGER=kv,doc,raw,qu  make
+# Compile with selected features
+$ WARENLAGER=kv,qu make
+```
+
+```shell
+# Start server
+$ bin/warenlager
+# Start server with custom settings
+$ bin/warenlager run -p 8192 -h 0.0.0.0
+```
+
 ## License
 
 _Just do what you'd like to_
